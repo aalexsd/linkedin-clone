@@ -1,16 +1,12 @@
-# linkedin_login_screen
+# Flutter Linkedin clone App
 
-A new Flutter project.
+This is the Flutter Linkedin clone.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+I've tried to clone Linkedin Login page.
 
-A few resources to get you started if this is your first Flutter project:
+In this project i'll improve screens everyday.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/104390047/228347708-37866ae2-8e39-4d2d-8dcb-a1fb5c01dbdb.gif)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
