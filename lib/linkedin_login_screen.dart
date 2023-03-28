@@ -8,7 +8,13 @@ class LinkedinLoginScreen extends StatefulWidget {
 }
 
 class _LinkedinLoginScreenState extends State<LinkedinLoginScreen> {
+  bool _showPassword = false;
 
+  void _togglePasswordVisibility() {
+    setState(() {
+      _showPassword = !_showPassword;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,26 +79,38 @@ class _LinkedinLoginScreenState extends State<LinkedinLoginScreen> {
           Padding(
             padding: const EdgeInsets.only(top: 30.0, left: 30, right: 30),
             child: TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
+                hintText: 'Enter your email',
+                labelText: 'Email',
                 border: OutlineInputBorder(),
-                hintText: 'Email or Phone',
-                fillColor: Colors.white70,
-                filled: true,
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 30.0, top: 10, right: 30),
             child: TextFormField(
-              obscureText: true,
-              decoration: const InputDecoration(
+              obscureText: !_showPassword,
+              decoration: InputDecoration(
+                hintText: 'Enter your password',
+                labelText: 'Password',
                 border: OutlineInputBorder(),
-                hintText: 'Password',
-                fillColor: Colors.white70,
-                filled: true,
+                suffixIcon: InkWell(
+                  onTap: _togglePasswordVisibility,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 12.0,
+                    right: 12,
+                    bottom: 12),
+                    child: Text(
+                      _showPassword ? 'Hide' : 'Show',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
               ),
-          ),
+            ),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 35.0, top: 15),
